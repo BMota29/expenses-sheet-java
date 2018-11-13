@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="expenses-sheet-app:war exploded">
-    <output-path>$PROJECT_DIR$/expenses-sheet-app/target/authentication</output-path>
+    <output-path>$PROJECT_DIR$/expenses-sheet-app/target/expenses-sheet</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -20,7 +20,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/expenses-sheet-app/target/authentication/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/expenses-sheet-app/target/expenses-sheet/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="expenses-sheet-app/web/Web" />
     </root>
