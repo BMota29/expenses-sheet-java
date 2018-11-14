@@ -48,4 +48,21 @@ public class LoginServiceTest {
         tx.rollback();
     }
 
+    @Test
+    public void validateUser() throws Exception {
+        EntityTransaction tx = underTest.getEntityManager().getTransaction();
+        //Given
+        User user = new User();
+        user.setEmail("admin@test.com");
+        user.setPassword("admin");
+        user.setUsername("admin");
+        //When
+        tx.begin();
+        underTest.createUser(user);
+        User validateUser = underTest.validate(user);
+        assertNotNull(validateUser);
+        assertEquals(validateUser.getId(), user.getId());
+        tx.rollback();
+    }
+
 }

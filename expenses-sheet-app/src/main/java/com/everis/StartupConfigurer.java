@@ -22,9 +22,9 @@ public class StartupConfigurer {
                 '1',
                 '4'
         };
-        user.setUsername("bmota");
-        user.setEmail("bmota@test.com");
-        user.setPassword("teste");
+        user.setUsername("admin");
+        user.setEmail("admin@admin.pt");
+        user.setPassword("admin");
         user.setSalt(bytes);
         loginService.createUser(user);
     }
