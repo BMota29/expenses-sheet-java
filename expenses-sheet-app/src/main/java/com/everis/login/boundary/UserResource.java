@@ -11,7 +11,6 @@ import java.util.List;
 
 @Path("users")
 @Logged
-@BasicAuthentication
 @Produces({"application/json"})
 public class UserResource {
 
@@ -25,30 +24,35 @@ public class UserResource {
     }
 
     @GET
+    @BasicAuthentication
     public List<User> getUsers() {
         return this.loginService.getUsers();
     }
 
     @GET
     @Path("{id}")
+    @BasicAuthentication
     public User getUserById(@PathParam("id") Long id ) {
         return this.loginService.getUserById(id);
     }
 
     @GET
     @Path("username/{username}")
+    @BasicAuthentication
     public User getUserByUsername(@PathParam("username") String username) {
         return this.loginService.getUserByUsername(username, false);
     }
 
     @GET
     @Path("email/{email}")
+    @BasicAuthentication
     public User getUserByEmail(@PathParam("email") String email) {
         return this.loginService.getUserByEmail(email);
     }
 
     @DELETE
     @Path("{id}")
+    @BasicAuthentication
     public User removeUser(@PathParam("id") long id) {
         return this.loginService.removeUser(id);
     }
