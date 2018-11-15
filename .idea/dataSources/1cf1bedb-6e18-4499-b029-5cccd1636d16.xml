@@ -21,182 +21,254 @@
     <table id="13" parent="2" name="EXPENSES"/>
     <table id="14" parent="2" name="EXPENSETYPES"/>
     <table id="15" parent="2" name="HOMES"/>
-    <table id="16" parent="2" name="USERS"/>
-    <column id="17" parent="13" name="ID">
+    <table id="16" parent="2" name="PAYCHECKS"/>
+    <table id="17" parent="2" name="PAYCHECKTYPES"/>
+    <table id="18" parent="2" name="USERS"/>
+    <column id="19" parent="13" name="ID">
       <Position>1</Position>
       <DataType>BIGINT|-5s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <DefaultExpression>GENERATED_BY_DEFAULT</DefaultExpression>
     </column>
-    <column id="18" parent="13" name="DESCRIPTION">
+    <column id="20" parent="13" name="DESCRIPTION">
       <Position>2</Position>
       <DataType>VARCHAR(255)|12s</DataType>
     </column>
-    <column id="19" parent="13" name="VALUE">
+    <column id="21" parent="13" name="VALUE">
       <Position>3</Position>
       <DataType>DOUBLE|8s</DataType>
     </column>
-    <column id="20" parent="13" name="VERSION">
+    <column id="22" parent="13" name="VERSION">
       <Position>4</Position>
       <DataType>BIGINT|-5s</DataType>
     </column>
-    <column id="21" parent="13" name="EXPENSETYPE_ID">
+    <column id="23" parent="13" name="EXPENSETYPE_ID">
       <Position>5</Position>
       <DataType>BIGINT|-5s</DataType>
     </column>
-    <column id="22" parent="13" name="HOME_ID">
+    <column id="24" parent="13" name="HOME_ID">
       <Position>6</Position>
       <DataType>BIGINT|-5s</DataType>
     </column>
-    <column id="23" parent="13" name="USER_ID">
+    <column id="25" parent="13" name="USER_ID">
       <Position>7</Position>
       <DataType>BIGINT|-5s</DataType>
     </column>
-    <index id="24" parent="13" name="SQL181114114433650">
+    <index id="26" parent="13" name="SQL181115164755920">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="25" parent="13" name="SQL181114114433790">
+    <index id="27" parent="13" name="SQL181115164756060">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>EXPENSETYPE_ID</ColNames>
     </index>
-    <index id="26" parent="13" name="SQL181114114433760">
+    <index id="28" parent="13" name="SQL181115164756000">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>HOME_ID</ColNames>
     </index>
-    <index id="27" parent="13" name="SQL181114114433780">
+    <index id="29" parent="13" name="SQL181115164756030">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>USER_ID</ColNames>
     </index>
-    <key id="28" parent="13" name="SQL181114114433650">
+    <key id="30" parent="13" name="SQL181115164755920">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="29" parent="13" name="XPNSESXPENSETYPEID">
+    <foreign-key id="31" parent="13" name="XPNSESXPENSETYPEID">
       <ColNames>EXPENSETYPE_ID</ColNames>
       <RefSchemaName>APP</RefSchemaName>
       <RefTableName>EXPENSETYPES</RefTableName>
-      <RefKeyName>SQL181114114433610</RefKeyName>
+      <RefKeyName>SQL181115164755790</RefKeyName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
-    <foreign-key id="30" parent="13" name="EXPENSES_HOME_ID">
+    <foreign-key id="32" parent="13" name="EXPENSES_HOME_ID">
       <ColNames>HOME_ID</ColNames>
       <RefSchemaName>APP</RefSchemaName>
       <RefTableName>HOMES</RefTableName>
-      <RefKeyName>SQL181114114433740</RefKeyName>
+      <RefKeyName>SQL181115164755890</RefKeyName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
-    <foreign-key id="31" parent="13" name="EXPENSES_USER_ID">
+    <foreign-key id="33" parent="13" name="EXPENSES_USER_ID">
       <ColNames>USER_ID</ColNames>
       <RefSchemaName>APP</RefSchemaName>
       <RefTableName>USERS</RefTableName>
-      <RefKeyName>SQL181114114433692</RefKeyName>
+      <RefKeyName>SQL181115164755822</RefKeyName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
-    <column id="32" parent="14" name="ID">
+    <column id="34" parent="14" name="ID">
       <Position>1</Position>
       <DataType>BIGINT|-5s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <DefaultExpression>GENERATED_BY_DEFAULT</DefaultExpression>
     </column>
-    <column id="33" parent="14" name="VERSION">
+    <column id="35" parent="14" name="DESCRIPTION">
       <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="36" parent="14" name="VERSION">
+      <Position>3</Position>
       <DataType>BIGINT|-5s</DataType>
     </column>
-    <index id="34" parent="14" name="SQL181114114433610">
+    <index id="37" parent="14" name="SQL181115164755790">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="35" parent="14" name="SQL181114114433610">
+    <key id="38" parent="14" name="SQL181115164755790">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="36" parent="15" name="ID">
+    <column id="39" parent="15" name="ID">
       <Position>1</Position>
       <DataType>BIGINT|-5s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <DefaultExpression>GENERATED_BY_DEFAULT</DefaultExpression>
     </column>
-    <column id="37" parent="15" name="DESCRIPTION">
+    <column id="40" parent="15" name="ADDRESSFLOR">
       <Position>2</Position>
       <DataType>VARCHAR(255)|12s</DataType>
     </column>
-    <column id="38" parent="15" name="VERSION">
+    <column id="41" parent="15" name="ADDRESSNAME">
       <Position>3</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="42" parent="15" name="ADDRESSNUMBER">
+      <Position>4</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="43" parent="15" name="DESCRIPTION">
+      <Position>5</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="44" parent="15" name="VERSION">
+      <Position>6</Position>
       <DataType>BIGINT|-5s</DataType>
     </column>
-    <index id="39" parent="15" name="SQL181114114433740">
+    <index id="45" parent="15" name="SQL181115164755890">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="40" parent="15" name="SQL181114114433740">
+    <key id="46" parent="15" name="SQL181115164755890">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="41" parent="16" name="ID">
+    <column id="47" parent="16" name="ID">
       <Position>1</Position>
       <DataType>BIGINT|-5s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <DefaultExpression>GENERATED_BY_DEFAULT</DefaultExpression>
     </column>
-    <column id="42" parent="16" name="EMAIL">
+    <column id="48" parent="16" name="AMOUNT">
+      <Position>2</Position>
+      <DataType>DOUBLE|8s</DataType>
+    </column>
+    <column id="49" parent="16" name="DATE">
+      <Position>3</Position>
+      <DataType>DATE|91s</DataType>
+    </column>
+    <column id="50" parent="16" name="VERSION">
+      <Position>4</Position>
+      <DataType>BIGINT|-5s</DataType>
+    </column>
+    <index id="51" parent="16" name="SQL181115164755950">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="52" parent="16" name="SQL181115164755950">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="53" parent="17" name="ID">
+      <Position>1</Position>
+      <DataType>BIGINT|-5s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>GENERATED_BY_DEFAULT</DefaultExpression>
+    </column>
+    <column id="54" parent="17" name="DESCRIPTION">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="55" parent="17" name="VERSION">
+      <Position>3</Position>
+      <DataType>BIGINT|-5s</DataType>
+    </column>
+    <index id="56" parent="17" name="SQL181115164755870">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="57" parent="17" name="SQL181115164755870">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="58" parent="18" name="ID">
+      <Position>1</Position>
+      <DataType>BIGINT|-5s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>GENERATED_BY_DEFAULT</DefaultExpression>
+    </column>
+    <column id="59" parent="18" name="EMAIL">
       <Position>2</Position>
       <DataType>VARCHAR(255)|12s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="43" parent="16" name="PASSWORD">
+    <column id="60" parent="18" name="PASSWORD">
       <Position>3</Position>
       <DataType>VARCHAR(255)|12s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="44" parent="16" name="SALT">
+    <column id="61" parent="18" name="SALT">
       <Position>4</Position>
       <DataType>BLOB|2004s</DataType>
     </column>
-    <column id="45" parent="16" name="USERNAME">
+    <column id="62" parent="18" name="USERNAME">
       <Position>5</Position>
       <DataType>VARCHAR(255)|12s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="46" parent="16" name="VERSION">
+    <column id="63" parent="18" name="VERSION">
       <Position>6</Position>
       <DataType>BIGINT|-5s</DataType>
     </column>
-    <index id="47" parent="16" name="SQL181114114433692">
+    <index id="64" parent="18" name="SQL181115164755822">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="48" parent="16" name="SQL181114114433690">
+    <index id="65" parent="18" name="SQL181115164755820">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>EMAIL</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="49" parent="16" name="SQL181114114433691">
+    <index id="66" parent="18" name="SQL181115164755821">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>USERNAME</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="50" parent="16" name="SQL181114114433692">
+    <key id="67" parent="18" name="SQL181115164755822">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="51" parent="16" name="SQL181114114433690">
+    <key id="68" parent="18" name="SQL181115164755820">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>EMAIL</ColNames>
     </key>
-    <key id="52" parent="16" name="SQL181114114433691">
+    <key id="69" parent="18" name="SQL181115164755821">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>USERNAME</ColNames>
     </key>
